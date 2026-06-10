@@ -1,0 +1,18 @@
+# Staging environment configuration
+
+app_env: staging
+log_level: INFO
+
+paths:
+  data_root: data
+  source_csv: data/raw/vehicle_search
+
+postgres:
+  host: localhost
+  port: 5432
+  database: vehicle_analytics
+  user: vehicle_user
+
+pipeline:
+  batch_size: 5000
+  quarantine_on_error: true

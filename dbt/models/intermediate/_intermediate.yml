@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_vehicle_enriched
+    description: Enriched vehicle records with derived fields

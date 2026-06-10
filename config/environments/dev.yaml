@@ -1,0 +1,19 @@
+# Development environment configuration
+
+app_env: dev
+log_level: DEBUG
+
+paths:
+  data_root: data
+  source_csv: data/raw/vehicle_search
+
+mysql:
+  host: localhost
+  port: 3306
+  database: vehicle_analytics
+  user: vehicle_user
+  password: changeme
+
+pipeline:
+  batch_size: 1000
+  quarantine_on_error: true

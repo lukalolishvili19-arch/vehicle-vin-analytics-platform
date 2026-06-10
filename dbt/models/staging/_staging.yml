@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_vehicle_search
+    description: Staging model for vehicle search inventory
+    columns:
+      - name: vin
+        description: Vehicle Identification Number (natural key)
+        tests:
+          - not_null

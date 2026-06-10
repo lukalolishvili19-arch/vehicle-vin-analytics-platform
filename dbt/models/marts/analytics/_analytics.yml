@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: agg_inventory_by_make
+    description: Inventory count by make and model
+  - name: agg_mileage_distribution
+    description: Mileage distribution by year
+  - name: agg_condition_grade_summary
+    description: Grade and condition report summary
+  - name: agg_auction_lights_summary
+    description: Auction lights distribution

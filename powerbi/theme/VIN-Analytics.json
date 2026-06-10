@@ -1,0 +1,23 @@
+{
+  "name": "VIN Analytics BMW",
+  "dataColors": ["#1F4788", "#C41E3A", "#2D8F4E", "#E8A317", "#6B7280", "#7C3AED", "#0891B2"],
+  "background": "#F4F6F9",
+  "foreground": "#1A1A2E",
+  "tableAccent": "#1F4788",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [{ "fontSize": 11, "fontFamily": "Segoe UI" }],
+        "labels": [{ "fontSize": 9 }],
+        "categoryAxis": [{ "fontSize": 9 }],
+        "valueAxis": [{ "fontSize": 9 }]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [{ "fontSize": 24, "color": { "solid": { "color": "#1F4788" } } }],
+        "categoryLabels": [{ "fontSize": 10 }]
+      }
+    }
+  }
+}

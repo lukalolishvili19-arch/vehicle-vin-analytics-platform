@@ -1,0 +1,14 @@
+# Copy to ~/.dbt/profiles.yml and update credentials
+
+vehicle_vin_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: vehicle_user
+      password: changeme
+      dbname: vehicle_analytics
+      schema: staging
+      threads: 4

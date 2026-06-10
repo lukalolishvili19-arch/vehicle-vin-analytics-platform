@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "connections": [
+    {
+      "details": {
+        "protocol": "mysql",
+        "address": {
+          "server": "localhost",
+          "database": "vehicle_analytics"
+        }
+      },
+      "options": {
+        "commandTimeout": "600"
+      },
+      "mode": "Import",
+      "authentication": "UsernamePassword",
+      "username": "vehicle_user"
+    }
+  ]
+}

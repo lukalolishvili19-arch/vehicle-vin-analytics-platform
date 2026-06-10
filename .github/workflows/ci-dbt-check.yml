@@ -1,0 +1,18 @@
+name: CI — dbt Check
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "dbt/**"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "dbt/**"
+
+jobs:
+  dbt-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "TODO — dbt parse && dbt compile"

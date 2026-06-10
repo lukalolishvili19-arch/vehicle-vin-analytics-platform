@@ -1,0 +1,3 @@
+# Minimal deps for thesis demo (no pandas — use scripts/run_etl_stdlib.py)
+pymysql>=1.1
+openpyxl>=3.1

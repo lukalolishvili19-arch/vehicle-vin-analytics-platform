@@ -1,0 +1,3 @@
+-- Master DDL index (reference only).
+-- Docker auto-runs 001-007 in order from this folder.
+-- Do NOT use SOURCE here — paths fail inside the init container.

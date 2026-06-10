@@ -1,0 +1,36 @@
+[project]
+name = "vehicle-vin-analytics-platform"
+version = "1.0.0"
+description = "VIN Intelligence & Car Market Analytics Platform — production ETL and analytics"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "sqlalchemy>=2.0",
+    "pymysql>=1.1",
+    "openpyxl>=3.1",
+]
+
+[project.scripts]
+vehicle-etl = "etl.__main__:main"
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=14.0"]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["etl*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

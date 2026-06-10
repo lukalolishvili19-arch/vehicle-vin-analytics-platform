@@ -1,0 +1,2 @@
+-- Fact tables
+-- TODO: Define fct_vehicle_inventory

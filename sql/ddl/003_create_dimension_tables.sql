@@ -1,0 +1,2 @@
+-- Dimension tables
+-- TODO: Define dim_vehicle, dim_make_model

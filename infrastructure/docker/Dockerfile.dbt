@@ -1,0 +1,9 @@
+# dbt transformation Docker image
+# TODO: Configure dbt container
+
+FROM ghcr.io/dbt-labs/dbt-postgres:1.7.latest
+
+WORKDIR /usr/app/dbt
+COPY dbt/ .
+
+CMD ["run"]

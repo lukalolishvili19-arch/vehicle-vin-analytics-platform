@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: fct_vehicle_inventory
+    description: Fact table — one row per vehicle listing

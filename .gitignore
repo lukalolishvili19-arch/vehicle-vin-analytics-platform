@@ -1,0 +1,56 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Data (keep structure, ignore actual datasets)
+data/raw/**/*.csv
+data/landing/**/*
+data/bronze/**/*
+data/silver/**/*
+data/gold/**/*
+data/quarantine/**/*
+!data/**/.gitkeep
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# Docker
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# BI exports
+bi/exports/*
+!bi/exports/.gitkeep
+
+# Power BI screenshots (local / thesis only — not for Git)
+docs/screenshots/pbi_*.png
+docs/screenshots/pbi_*.jpg
+docs/screenshots/pbi_*.jpeg
+*.pbix
+*.pbip
+
+# Terraform
+infrastructure/terraform/.terraform/
+*.tfstate
+*.tfstate.*

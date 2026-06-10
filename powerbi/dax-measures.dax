@@ -1,0 +1,56 @@
+// Power BI DAX Measures — VIN Intelligence Platform
+
+Total Vehicles = COUNTROWS(fct_vehicle_inventory)
+
+Total Models = DISTINCTCOUNT(fct_vehicle_inventory[model])
+
+Avg Mileage = AVERAGE(fct_vehicle_inventory[mileage])
+
+Avg Grade =
+    CALCULATE(
+        AVERAGE(fct_vehicle_inventory[grade]),
+        NOT(ISBLANK(fct_vehicle_inventory[grade]))
+    )
+
+Condition Report % =
+    DIVIDE(
+        SUM(fct_vehicle_inventory[has_condition_report]),
+        [Total Vehicles]
+    )
+
+Green Light % =
+    DIVIDE(
+        CALCULATE([Total Vehicles], dim_auction_light[light_code] = "GREEN"),
+        [Total Vehicles]
+    )
+
+Red Light % =
+    DIVIDE(
+        CALCULATE([Total Vehicles], dim_auction_light[light_code] = "RED"),
+        [Total Vehicles]
+    )
+
+AS IS Count =
+    CALCULATE([Total Vehicles], fct_vehicle_inventory[is_as_is] = 1)
+
+Structural Damage Count =
+    CALCULATE([Total Vehicles], fct_vehicle_inventory[has_structural_damage] = 1)
+
+High Mileage Count =
+    CALCULATE([Total Vehicles], fct_vehicle_inventory[mileage_bucket] = "HIGH")
+
+Excellent Grade Count =
+    CALCULATE([Total Vehicles], fct_vehicle_inventory[grade_tier] = "EXCELLENT")
+
+Model Share % =
+    DIVIDE(
+        [Total Vehicles],
+        CALCULATE([Total Vehicles], ALL(dim_make_model[model]))
+    )
+
+Avg Grade by Model =
+    CALCULATE([Avg Grade], ALLEXCEPT(dim_make_model, dim_make_model[model]))
+
+Avg Picture Count = AVERAGE(fct_vehicle_inventory[picture_count])
+
+Quality Score = DIVIDE([Avg Grade], 5) * 100

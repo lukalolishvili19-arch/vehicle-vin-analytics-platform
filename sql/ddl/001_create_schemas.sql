@@ -1,0 +1,5 @@
+-- Create warehouse schemas
+CREATE SCHEMA IF NOT EXISTS staging;
+CREATE SCHEMA IF NOT EXISTS intermediate;
+CREATE SCHEMA IF NOT EXISTS marts;
+CREATE SCHEMA IF NOT EXISTS snapshots;

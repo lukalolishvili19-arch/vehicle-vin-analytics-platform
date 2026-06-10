@@ -1,0 +1,2 @@
+-- Inventory overview analytics query
+-- TODO: Implement inventory_overview

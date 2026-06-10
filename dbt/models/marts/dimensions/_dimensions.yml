@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: dim_vehicle
+    description: Vehicle dimension (VIN as natural key)
+  - name: dim_make_model
+    description: Make / Model / Style hierarchy
